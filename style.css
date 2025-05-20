@@ -1,0 +1,584 @@
+@font-face {
+    font-family: 'Yapari';
+    src: url("/font/YAPARI/Yapari-SemiBold.woff2") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url("/font/pretendard/2Pretendard-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url("/font/pretendard/3Pretendard-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url("/font/pretendard/4Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url("/font/pretendard/5Pretendard-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url("/font/pretendard/6Pretendard-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url("/font/pretendard/7Pretendard-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url("/font/pretendard/8Pretendard-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url("/font/pretendard/9Pretendard-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* 노말라이즈 */
+body,ul,li,p,span,h1,h2,h3 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/* 공통 */
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;;
+    max-width: 100vw;
+    overflow: hidden;
+    word-break: keep-all;    
+    color: #fff;
+    background-color: #040405;
+}
+
+button {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.img-box img {
+    width: 100%;
+}
+
+header .h-top, .main, .project .title, .project .site-name, .project .link, .contact .c_info .name {
+    font-family: 'Yapari', sans-serif;
+}
+
+@media screen and (max-width: 990px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+/* 커스텀 */
+
+/* header 시작 */
+header .h-top {
+    position: fixed;
+    width: 100%;
+    max-width: 1580px;
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 30px;
+    z-index: 100;
+    span {
+        display: inline-block;
+        font-size: clamp(13px, 1.3vw, 16px);
+    }
+}
+
+header .h-bottom {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+header .h-bottom .gnb {
+    display: inline-flex;
+    gap: clamp(10px, 5vw, 40px);
+    border-radius: .8em;
+    background-color: rgba(4, 4, 5, .2);
+    backdrop-filter: blur(1px);
+}
+
+header .h-bottom .gnb > li > a {
+    display: inline-flex;
+    padding: 0.5em 1em;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(13px, 1.3vw, 16px);
+    border-radius: .8em;
+    border: 0.5px solid transparent;
+    transition: border-color .3s;
+}
+
+header .h-bottom .gnb > li:hover > a {
+    border-color:#fff;
+}
+/* header 끝 */
+
+
+
+.scroller {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden !important; 
+}
+
+/* .main 시작 */
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.main .video-box {
+    width: 100%;
+    height: 100%;   
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.main .video-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(4, 4, 5, .7) 10%, rgba(4, 4, 5, 0.2) 80%, rgba(4, 4, 5, 1) 100%);
+    z-index: 1;
+}
+
+.main .video-box video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+}
+
+.main .txt {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    span {
+        display: inline-block;
+    }
+}
+
+.main .txt > p {
+    overflow: hidden;
+    text-align: center;
+}
+
+.main .txt .txt-1 {
+    font-size: clamp(16px, 4vw, 36px);
+}
+
+.main .txt .txt-2 {
+    font-size: clamp(28px, 8vw, 110px);
+}
+
+.main .txt .txt-3 {
+    font-size: clamp(24px, 6vw, 80px);
+}
+
+/* main끝 */
+
+
+
+
+/* project 시작 */
+.project {
+    padding-top: 10em;
+}
+
+.project .project-top {
+    overflow: hidden;
+    margin-bottom: 5em;
+    padding-inline: 5em;
+}
+
+.project .title {
+    font-size: clamp(20px, 4vw, 30px);
+    display: inline-block;    
+}
+
+.project .pin {
+    width: 100%;
+    height: 100vh;
+    padding-inline: 5em;
+    padding-top: 7em;   
+    position: relative; 
+    filter: brightness(1);  
+    transition: filter .6s;
+}
+
+.project .pin .pin_txt {
+    width: 100%;
+    height: 30em;
+    border-radius: .8em;
+    background-color: rgba(194, 194, 194, 0.2);
+    backdrop-filter: blur(3px);
+    position: relative;
+    z-index: 10;
+    transition: all ease-in-out .6s;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project .pin .pin_txt .line {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding-bottom: 4px;
+    border-bottom: 0.5px solid rgba(194, 194, 194, 0.3);
+    font-size: clamp(13px, 1.5vw, 18px);
+    font-weight: 200;
+    font-style: italic;  
+    color: #C2C2C2;
+}
+
+.project .pin .pin_txt .site-name {
+    font-size: clamp(24px, 7vw, 64px);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.project .pin .pin_txt .info {
+    font-size: clamp(14px, 1.75vw, 20px);
+    font-weight: 300;    
+    margin-top: 2.15em;
+    margin-bottom: 0.7em;    
+    text-align: center;
+    padding-inline: 10px;
+    span {
+        font-weight: 500;
+    }
+}
+
+.project .pin .pin_txt .sum {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  
+    span {
+        font-size: clamp(11px, 1.35vw, 15px);
+        font-weight: 300;
+        color: #DFDFDF;
+    }
+}
+
+.project .pin .pin_txt .link {
+    display: inline-flex;
+    gap: 28px;
+    margin-top: 5em;
+}
+
+.project .pin .pin_txt .link a {
+    font-size: clamp(11px, 1.35vw, 15px);
+    padding: .5em 1em;
+    border-radius: .5em;    
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.3);
+    transition: all .3s;
+}
+
+.project .pin .pin_txt .link .site {
+    background-color: rgba(255, 255, 255, .3);      
+}
+
+.project .pin .pin_txt .link .site:hover {
+    background-color: rgba(255, 255, 255, .5); 
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.project .pin .pin_txt .link .git {
+    border: .5px solid rgba(255, 255, 255, .3);
+}
+
+.project .pin .pin_txt .link .git:hover {
+    border-color:  rgba(255, 255, 255, 1);
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+.project .pin .pin_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;    
+    overflow: hidden;
+    img {
+        transform: scale(1.1);
+        transition: all ease-in-out .6s;
+    }
+}
+
+.project .pin::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(4, 4, 5, 1) 0%,
+        rgba(4, 4, 5, 0.9) 8%,
+        rgba(4, 4, 5, 0.6) 16%,
+        rgba(4, 4, 5, 0.3) 30%,
+        rgba(4, 4, 5, 0.3) 70%,
+        rgba(4, 4, 5, 0.8) 90%,
+        rgba(4, 4, 5, 1) 100%
+    );
+    z-index: 1;
+}
+
+.project .pin.small {
+    filter: brightness(.5);  
+}
+
+.project .pin.small .pin_txt {
+    transform: scale(.9) translateY(5%);
+}
+
+.project .pin.small .pin_img img {
+    transform: scale(1);
+}
+
+@media screen and (max-width: 990px) {
+    .project .pin {
+        padding-top: 10em;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .project .project-top {
+        margin-bottom: 2em;
+    }
+
+    .project .pin {
+        padding-inline: 3em;
+        padding-top: 12em;
+    }
+}
+
+/* project 끝 */
+
+
+/* about 시작 */
+.about {
+    padding-top: 25em;
+    padding-bottom: 20em;
+}
+
+.about .me {
+    text-align: center;
+}
+
+.about .me span {
+    display: inline-block;
+    font-size: clamp(18px, 4vw, 38px);
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: rgb(102, 102, 102);
+}
+
+.about .me .bold {
+    font-weight: 700;
+}
+
+.about .me .mx-990, .about .me .mx-440 {
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+    .about .me .mx-990 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        padding-top: 15em;
+        padding-bottom: 15em;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .about .me .mx-440 {
+        display: block;
+    }
+}
+
+/* about 끝 */
+
+
+
+
+/* contact 시작 */
+.contact {
+    width: 100%;
+    height: 45em;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact .video-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 13em;
+    left: 0;
+    animation: wave-y 5s ease-in-out infinite alternate;
+}
+
+@keyframes wave-y {
+    from {
+        top: 13em;
+    }
+    to {
+        top: -10em;
+    }
+}
+
+
+.contact .video-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(4, 4, 5, 1) 0%, rgba(4, 4, 5, 1) 20%, rgba(4, 4, 5, 0.2) 80%, rgba(4, 4, 5, 1) 100%);
+    z-index: 1;
+}
+
+.contact .video-box video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+}
+
+.contact .c_info {
+    position: absolute;    
+    top: 9em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    display: inline-flex;
+    flex-direction: column;
+    width: 85vw;
+    max-width: 990px;
+}
+
+.contact .c_info .name {
+    font-size: clamp(14px, 2vw, 24px);;
+    font-weight: 600;
+}
+
+.contact .c_info > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 7em;
+    overflow: hidden;
+}
+
+.contact .c_info .email {
+    display: inline-block;
+    font-size: clamp(20px, 3vw, 36px);;
+    font-weight: 600;
+}
+
+.contact .c_info .git-icon {
+    width: 1.5em;
+    height: 1.5em;
+    img {
+        filter: invert(100%);
+    }
+}
+
+.contact .c_info .rights {
+    color: rgb(102, 102, 102);
+}
+
+/* contact 끝 */
