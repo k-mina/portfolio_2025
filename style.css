@@ -143,7 +143,7 @@ header .h-top {
     z-index: 100;
     span {
         display: inline-block;
-        font-size: clamp(13px, 1.3vw, 16px);
+        font-size: clamp(13px, 1.5vw, 16px);
     }
 }
 
@@ -275,7 +275,7 @@ header .h-bottom .gnb > li:hover > a {
     width: 100%;
     height: 100vh;
     padding-inline: 5em;
-    padding-top: 7em;   
+    padding-top: 12em;   
     position: relative; 
     filter: brightness(1);  
     transition: filter .6s;
@@ -413,7 +413,7 @@ header .h-bottom .gnb > li:hover > a {
 }
 
 .project .pin.small .pin_txt {
-    transform: scale(.9) translateY(5%);
+    transform: scale(.9) translateY(10%);
 }
 
 .project .pin.small .pin_img img {
@@ -422,7 +422,7 @@ header .h-bottom .gnb > li:hover > a {
 
 @media screen and (max-width: 990px) {
     .project .pin {
-        padding-top: 10em;
+        padding-top: 14em;
     }
 }
 
@@ -433,7 +433,7 @@ header .h-bottom .gnb > li:hover > a {
 
     .project .pin {
         padding-inline: 3em;
-        padding-top: 12em;
+        padding-top: 16em;
     }
 }
 
