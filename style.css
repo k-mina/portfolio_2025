@@ -1,62 +1,62 @@
 @font-face {
     font-family: 'Yapari';
-    src: url("/font/YAPARI/Yapari-SemiBold.woff2") format("woff");
+    src: url("./font/YAPARI/Yapari-SemiBold.woff2") format("woff");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pretendard';
-    src: url("/font/pretendard/2Pretendard-ExtraLight.woff") format("woff");
+    src: url("./font/pretendard/2Pretendard-ExtraLight.woff") format("woff");
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pretendard';
-    src: url("/font/pretendard/3Pretendard-Light.woff") format("woff");
+    src: url("./font/pretendard/3Pretendard-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pretendard';
-    src: url("/font/pretendard/4Pretendard-Regular.woff") format("woff");
+    src: url("./font/pretendard/4Pretendard-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pretendard';
-    src: url("/font/pretendard/5Pretendard-Medium.woff") format("woff");
+    src: url("./font/pretendard/5Pretendard-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pretendard';
-    src: url("/font/pretendard/6Pretendard-SemiBold.woff") format("woff");
+    src: url("./font/pretendard/6Pretendard-SemiBold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pretendard';
-    src: url("/font/pretendard/7Pretendard-Bold.woff") format("woff");
+    src: url("./font/pretendard/7Pretendard-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pretendard';
-    src: url("/font/pretendard/8Pretendard-ExtraBold.woff") format("woff");
+    src: url("./font/pretendard/8Pretendard-ExtraBold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pretendard';
-    src: url("/font/pretendard/9Pretendard-Black.woff") format("woff");
+    src: url("./font/pretendard/9Pretendard-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
 }
